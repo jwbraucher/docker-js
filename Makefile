@@ -26,10 +26,11 @@ awk -v RS= -F: '/^# File/,/^# Finished Make data base/ \
 
 # Build the images
 # if "rebuild" target is added, build images with --no-cache
-.PHONY: build rebuild
-build rebuild:
+.PHONY: build rebuild build-container rebuild-container
+build rebuild build-container rebuild-container:
 	@ \
 nocache=`echo $@ | awk '/rebuild/ {printf "--no-cache"}'` ; \
+export dockerfile=`echo $@ | awk '/container/ {printf "dockerfile-container"}'` ; \
 set -x ; \
 docker-compose build --force-rm $${nocache}
 
