@@ -1,0 +1,30 @@
+#!/bin/bash
+# vim: set filetype=sh :
+
+# This script manages the application by calling child scripts
+
+# the script takes one argument, the command
+USAGE="Usage: $0 [ command ]"
+if [ $# -ne 1 ]; then
+  echo $USAGE
+  exit 1
+fi
+command=$1
+
+script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+export PATH="${PATH}:${script_dir}"
+
+# Read app environment variables
+source ${script_dir}/app.env
+
+# Run command
+set -x
+if [ -e "${script_dir}/app.${command}" ]; then
+  source ${script_dir}/app.${command}
+else
+  # command not supported
+  echo $USAGE
+  echo "ERROR: $0 $command not implemented"
+  exit 1
+fi
+

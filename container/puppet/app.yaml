@@ -1,0 +1,6 @@
+# Puppet Hiera Data
+#
+classes:
+    - apt
+    - nodejs
+    - ruby

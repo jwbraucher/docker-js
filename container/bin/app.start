@@ -1,0 +1,16 @@
+#!/bin/bash -ex
+# vim: set filetype=sh :
+
+# This script starts the app
+
+# Configure
+app.configure
+
+echo Starting ${app}
+su - "${app_user}" -c /bin/bash -- -ex << END_OF_SUDO
+cd "${app_home}"
+
+grunt serve
+
+END_OF_SUDO
+

@@ -1,0 +1,9 @@
+# Puppet Forge
+forge 'https://forgeapi.puppetlabs.com'
+
+# Modules
+mod 'puppetlabs/apt'
+mod 'puppetlabs/nodejs'
+mod 'puppetlabs/ruby'
+mod 'frankcarey/yeoman'
+
