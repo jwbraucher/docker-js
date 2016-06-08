@@ -4,6 +4,7 @@ SHELL := /bin/bash
 ip := 0.0.0.0
 command := default
 dockerfile := Dockerfile
+clean_home := container/src
 this_file := $(lastword $(MAKEFILE_LIST))
 
 ### Generic Makefile config
@@ -60,14 +61,10 @@ for i in $${images}; do docker rmi $${i}; done
 
 clean-files:
 	@echo "...Cleaning Files..." ; set -x ;\
-find volumes/ \
--mindepth 1 -maxdepth 1 \
--type d -not -name export \
--exec find {} \( ! -type d \) -delete \; ; \
-find volumes/ \
--mindepth 1 -maxdepth 1 \
--type d -not -name export \
--exec find {} -type d -mindepth 1 -empty -delete \;
+find ${clean_home}/ \
+-not -type d -delete ; \
+find ${clean_home}/ \
+-type d -mindepth 1 -empty -delete ;
 
 pull:
 	@echo "...Pulling images..." ; \
