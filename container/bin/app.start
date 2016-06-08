@@ -8,7 +8,7 @@ app.configure
 
 echo Starting ${app}
 su - "${app_user}" -c /bin/bash -- -ex << END_OF_SUDO
-cd "${app_home}"
+cd "${app_home}/src"
 
 grunt serve
 

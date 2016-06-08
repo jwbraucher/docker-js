@@ -5,7 +5,4 @@
 app.configure
 
 echo Generating new app structure
-su - "${app_user}" -c /bin/bash -- -ex << END_OF_SUDO
-mkdir -p "${app_home}"
-END_OF_SUDO
-su - "${app_user}" -c "cd ${app_home} && yo"
+su - "${app_user}" -c "cd ${app_home}/src && yo"

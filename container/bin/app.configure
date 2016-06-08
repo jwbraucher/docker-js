@@ -4,5 +4,6 @@
 # This script configures the container
 
 # set uid on run-time user and directory
-fix-uids "${app_home}" "${app_user}"
-chown -R "${app_user}:${app_user}" "${app_home}"
+mkdir -p "${app_home}/src"
+fix-uids "${app_home}/src" "${app_user}"
+chown -R "${app_user}:${app_user}" "${app_home}/src"
