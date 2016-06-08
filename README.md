@@ -5,10 +5,8 @@ preconfigured for javascript application development.
 
 ## Features Include:
 * yeoman, grunt, and npm
-* Makefile
-* /app entrypoint
-* /fix-uids (for mac os host volumes)
-* docker-compose example
+* /bin/app entrypoint
+* /bin/fix-uids (for mac os host volumes)
 
 ## Usage
 
