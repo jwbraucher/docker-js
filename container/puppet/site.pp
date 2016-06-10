@@ -19,3 +19,5 @@ user { 'app':
     managehome  => true,
 }
 
+# Install g++ for node module building
+package { 'g++': }
