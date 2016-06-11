@@ -19,5 +19,11 @@ user { 'app':
     managehome  => true,
 }
 
-# Install g++ for node module building
+# g++ is needed for node module building
 package { 'g++': }
+
+# gulp task runner as an alternative to grunt
+package { 'gulp':
+    provider => 'npm',
+    require => Class['nodejs']
+}

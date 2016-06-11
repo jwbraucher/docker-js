@@ -1,3 +1,12 @@
+## braucher/js 0.0.4
+
+### Features
+- added gulp
+
+### Bugfixes
+- removed exposed ports since they may not be the same
+  in all projects
+
 ## braucher/js 0.0.3
 
 ### Features

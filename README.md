@@ -1,12 +1,10 @@
-# braucher/js 0.0.2
+# braucher/js 0.0.4
 
 This [braucher/js](https://hub.docker.com/r/braucher/js/) docker image provides an Ubuntu 14.04 application container
 preconfigured for javascript application development.
 
 ## Features Include:
-* yeoman, grunt, and npm
-* /bin/app entrypoint
-* /bin/fix-uids (for mac os host volumes)
+* node, npm, grunt, gulp, yeoman
 
 ## Usage
 
