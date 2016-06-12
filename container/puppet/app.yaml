@@ -4,3 +4,5 @@ classes:
     - apt
     - nodejs
     - ruby
+
+nodejs::repo_url_suffix: 'node_4.x'
