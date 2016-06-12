@@ -1,3 +1,8 @@
+## braucher/js 0.0.5
+
+### Features
+- bumped nodejs version up to 4.x
+
 ## braucher/js 0.0.4
 
 ### Features

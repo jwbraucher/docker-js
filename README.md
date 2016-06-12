@@ -1,4 +1,4 @@
-# braucher/js 0.0.4
+# braucher/js 0.0.5
 
 This [braucher/js](https://hub.docker.com/r/braucher/js/) docker image provides an Ubuntu 14.04 application container
 preconfigured for javascript application development.
